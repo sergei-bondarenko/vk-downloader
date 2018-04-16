@@ -1,5 +1,5 @@
 # vk-downloader
-Python tool for downloading videos from vk.com
+A Python tool for downloading videos from vk.com
 
 Usage:
 ```
