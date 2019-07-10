@@ -12,8 +12,9 @@ init(convert=True)
 
 
 def main():
+
     clipboard = pyperclip.paste()
-    if "vk.com" and "video" and "_" not in clipboard:
+    if "vk.com" and "video" and "_" not in clipboard or clipboard is None:
         print()
         print("[" + Fore.RED + "-" + Style.RESET_ALL + "]" + " ERROR!!!\n"
               "Put video URL into your clipboard.\n"
@@ -24,14 +25,13 @@ def main():
     if "http://" in clipboard:
         clipboard = clipboard.replace("http", "https")
     if "z=" in clipboard:
-        newclipboard = clipboard.split("z=", 1)[-1]
-        newclipboard = newclipboard.split("%2F", 1)[0]
-        newclipboard = "https://vk.com/" + newclipboard
+        clipboard = clipboard.split("z=", 1)[-1]
+        clipboard = clipboard.split("%2F", 1)[0]
+        clipboard = "https://vk.com/" + clipboard
 
     print("")
     print("[" + Fore.GREEN + "+" + Style.RESET_ALL + "]" + " Video URL: " + clipboard)
-
-    page = urlopen(newclipboard)
+    page = urlopen(clipboard)
     content = page.read()
     page.close()
     link = content.decode('utf-8', "ignore")
