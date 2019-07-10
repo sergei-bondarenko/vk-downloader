@@ -1,7 +1,9 @@
 # vk-downloader
-A Python tool for downloading videos from vk.com
+Fast Python tool for downloading videos from vk.com
 
 Usage:
 ```
-curl -Ls https://git.io/vk-downloader | python3 - https://vk.com/video-12345678_987654321
+Copy your URL into clipboard and simply run .py script.
+URL Examples: https://vk.com/video1315763_456239439
 ```
+Also supports decomposition of custom URLs
