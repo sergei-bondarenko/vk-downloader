@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Original project page: https://github.com/grez911/vk-downloader
+# Original project page: https://github.com/sergei-bondarenko/vk-downloader
 
 import sys
 import os
